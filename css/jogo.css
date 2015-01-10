@@ -1,0 +1,32 @@
+#fotos_jogos{
+	padding-left: 60px;
+}
+
+#fotos_jogos ul{
+	list-style: none;
+}
+
+#fotos_jogos li{
+	float: left;
+	margin: 30px;
+}
+
+#fotos_jogos img{
+	display: block;
+	padding: 5px;
+	background-color: #8b9dc3;
+	border: 3px solid #3b5998;
+	box-shadow: 2px 2px 4px #000000;
+}
+
+#fotos_jogos img:hover{
+	border: 3px solid #ffffff;
+}
+
+#jogos{
+	width: 1024px;
+	height: 750px;
+	background-color: #f7f7f7;
+	padding-top: 20px;
+	margin-top: 0px;
+}
