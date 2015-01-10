@@ -1,0 +1,22 @@
+#contato h2{
+	font-size: 30px;
+	font-family: 'Carme', sans-serif;
+	text-align: center;
+	letter-spacing: 1px;
+}
+
+#contato p{
+	padding-left: 40px;
+	padding-right: 40px;
+	letter-spacing: 1px;
+	line-height: 160%;
+	font-family: 'Carme', sans-serif;
+	font-size: 18px;
+}
+
+#googleMap{
+	width:500px;
+	height:380px;
+	margin-left: 230px;
+	margin-top: 35px;
+}
