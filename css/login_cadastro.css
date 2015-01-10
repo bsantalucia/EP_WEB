@@ -1,0 +1,61 @@
+
+span{
+	font-family: 'Source Sans Pro', sans-serif;
+	letter-spacing: 1px;
+	font-size: 15px;
+}
+
+#cadastro{
+	width: 1024px;
+	height: 750px;
+	background-color: #f7f7f7;
+	padding-top: 20px;
+	margin-top: 0px;
+}
+
+#cadastro h3{
+	font-family: 'Source Sans Pro', sans-serif;
+	color: #0e1a40;
+	letter-spacing: 1px;
+	text-align: center;
+}
+
+#cadastro label{
+	font-family: 'Play', sans-serif;
+	font-size: 16px;
+}
+
+#fieldset{
+	width: 550px;
+	height: 570px;
+	border: 2px solid #dfe3ee;
+	float: center;
+	margin-top: 15px;
+	margin-left: 225px;
+	padding-top: 30px;
+	padding-left: 35px;
+}
+
+#enviar{
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 14px;
+	color: white;
+	border: none;
+	padding: 18px;
+	background-color: #3b5998;
+}
+
+#enviar:hover{
+	background-color: #8b9dc3;
+}
+
+#enviar:active{
+	background-color: #dfe3ee;
+}
+
+input{
+	padding: 8px;
+}
+
+
+
