@@ -1,0 +1,125 @@
+body{
+	/*background-color: #00aedb; /*azul*/
+	width: 1024px;
+	height: 800px;
+	background-color: #3b5998;
+	margin: 0 auto;
+}
+
+
+/******Logo******/
+#logo{
+	height: 244px;
+	width: 1024px;
+	/*background-color: #ffc425; /*amarelo*/
+	background-color: #8b9dc3;
+
+}
+
+/******Login******/
+#login ul{
+	list-style: none;
+	margin-top: -16px;
+	padding-left: 10px;
+}
+
+#login li{
+	display: inline;
+}
+
+#login a{
+	font-family: 'Play', sans-serif;
+	font-size: 14px;
+	float:left;
+	padding-left: 25px;
+	color: #000000;
+	letter-spacing: 1px;
+	padding-top: 10px;
+	text-decoration: none;
+}
+#login a:hover {
+	color: #dfe3ee;
+}
+#login a:active{
+	color: #3b5998;
+}
+
+/******Menu******/
+#menu{
+	width: 1024px;
+	height: 70px;
+	background-color: #dfe3ee;
+	
+}
+#menu ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+#menu li{
+	display: inline;
+}
+#menu a{
+	font-family: 'Play', sans-serif;
+	display: block;
+	float: left;
+	width: 210px;
+	height: 50px;
+	padding-top: 20px;
+	padding-left: 22px;
+	padding-right: 24px;
+	text-decoration: none;
+	text-align: center;
+	letter-spacing: 1px;
+	font-size: 25px;
+	color: #3b5998;
+}
+#menu a:hover{
+	background-color: #3b5998;
+	color: #f7f7f7;
+}
+
+/*****CONTEUDO*****/
+#conteudo{
+	width: 1024px;
+	height: 750px;
+	background-color: #f7f7f7;
+	padding-top: 20px;
+	margin-top: 0px;
+}
+
+
+#sobre h2{
+	font-size: 30px;
+	font-family: 'Carme', sans-serif;
+	text-align: center;
+	letter-spacing: 1px;
+}
+
+#sobre p{
+	padding-left: 50px;
+	padding-right: 50px;
+	padding-top: 20px;
+	letter-spacing: 1px;
+	line-height: 160%;
+	font-family: 'Carme', sans-serif;
+	font-size: 18px;
+}
+
+#conteudo_home h2{
+	font-size: 30px;
+	font-family: 'Carme', sans-serif;
+	text-align: center;
+	letter-spacing: 1px;
+}
+
+#conteudo_home p{
+	padding-left: 50px;
+	padding-right: 50px;
+	padding-top: 20px;
+	letter-spacing: 1px;
+	line-height: 160%;
+	font-family: 'Carme', sans-serif;
+	font-size: 18px;
+}
+
