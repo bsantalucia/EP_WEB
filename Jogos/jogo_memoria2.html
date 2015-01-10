@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="../css/jogo_memoria.css" rel="stylesheet" type="text/css" media="screen">
+	<link href='http://fonts.googleapis.com/css?family=Play' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Carme' rel='stylesheet' type='text/css'>
+	<style type="text/css">
+		div#memory_board{
+			background:#E2BF96;
+			border:#999 3px solid;
+			width:730px;
+			height:730px;
+			padding:24px;
+			padding-top: 30px;
+			margin:0px auto;
+		}		
+		div#memory_board > div{ 
+	
+			background-image: url('../images/jogo_memoria/default.jpg');
+			border:#000 1px solid;
+			width:120px;
+			height:120px;
+			float:left;
+			font-size: 64px;
+			margin:10px;
+			padding:20px;
+			cursor:pointer;
+			text-align:center;
+		}
+	</style>
+
+	<script>
+	// Scripted By Adam khoury in connection with the following video tutorial:
+	// http://www.youtube.com/watch?v=c_ohDPWmsM0
+	var memory_array = ['A','A','B','B','C','C','D','D','E','E','F','F','G','G','H','H'];
+	var memory_values = [];
+	var memory_tile_ids = [];
+	var tiles_flipped = 0;
+	Array.prototype.memory_tile_shuffle = function(){
+	    var i = this.length; 
+	    var j, temp;
+	    console.log("i = "+i); 
+	    while(--i > 0){
+	    	console.log("While--> i = "+i);
+	        j = Math.floor(Math.random() * (i+1));
+	        console.log("j = "+j);
+	        temp = this[j];
+	        console.log("temp = "+temp);
+	        this[j] = this[i];
+	        console.log("this[j] = "+this[j]);
+	        this[i] = temp;
+	        console.log("this[i] = "+this[i]);
+	    }
+	}
+	function newBoard(){
+		console.log("Entrou na funcao newBoard()");
+		tiles_flipped = 0;
+		var output = '';
+		console.log("Vai embaralhar!");
+	    memory_array.memory_tile_shuffle();
+		for(var i = 0; i < memory_array.length; i++){
+			output += '<div id="tile_'+i+'" onclick="memoryFlipTile(this,\''+memory_array[i]+'\')"></div>';
+			console.log("output = "+output);
+		}
+		document.getElementById('memory_board').innerHTML = output;
+	}
+
+	function memoryFlipTile(tile,val){
+
+		console.log("@@Entrou na funcao memoryFlipTile()");
+		console.log("memory_values.length = "+memory_values.length);	
+		if(memory_values.length < 2){ // menor que 2 pq impede do jogador virar mais uma carta
+			if(val == 'A'){
+				tile.style.background = 'url(../images/jogo_memoria/macaco.jpg) no-repeat';
+				//tile.innerHTML = val;
+			}
+			if(val == 'B'){
+				tile.style.background = 'url(../images/jogo_memoria/onca.jpg) no-repeat';
+			}
+			if(val == 'C'){
+				tile.style.background = 'url(../images/jogo_memoria/pinguim.jpg) no-repeat';
+			}
+			if(val == 'D'){
+				tile.style.background = 'url(../images/jogo_memoria/elefante.jpg) no-repeat';
+			}
+			if(val == 'E'){
+				tile.style.background = 'url(../images/jogo_memoria/cachorro.jpg) no-repeat';
+			}
+			if(val == 'F'){
+				tile.style.background = 'url(../images/jogo_memoria/gato.jpg) no-repeat';
+			}
+			if(val == 'G'){
+				tile.style.background = 'url(../images/jogo_memoria/leao.jpg) no-repeat';
+			}
+			if(val == 'H'){
+				tile.style.background = 'url(../images/jogo_memoria/burro.jpg) no-repeat';
+			}
+			console.log(">Entrou no primeiro IF:");
+			console.log("tile.innerHTML = "+tile.innerHTML);
+			if(memory_values.length == 0){
+				memory_values.push(val);
+				memory_tile_ids.push(tile.id);
+				console.log(">>Entrou no segundo IF:");
+				console.log("memory_values[0] = "+memory_values[0]);
+				console.log("memory_tile_ids[0] = "+memory_tile_ids[0]);
+			} else if(memory_values.length == 1){
+				memory_values.push(val);
+				memory_tile_ids.push(tile.id);
+				console.log(">>>Entrou no ELSE IF:");
+				console.log("memory_values[1] = "+memory_values[1]);
+				console.log("memory_tile_ids[1] = "+memory_tile_ids[1]);
+				if(memory_values[0] == memory_values[1]){
+					console.log(">>>>Entrou no terceiro IF:");
+					console.log("memory_values[0] = "+memory_values[0]);
+					console.log("memory_values[1] = "+memory_values[1]);
+					tiles_flipped += 2;
+					// Clear both arrays
+					memory_values = [];
+	            	memory_tile_ids = [];
+	            	
+	            	console.log("tiles_flipped = "+tiles_flipped);
+	            	console.log("qtd memory_values = "+memory_values.length);
+	            	console.log("qtd memory_tile_ids = "+memory_tile_ids.length);
+					// Check to see if the whole board is cleared
+					if(tiles_flipped == memory_array.length){
+						alert("Parabens! Vamos iniciar um novo jogo!!");
+						document.getElementById('memory_board').innerHTML = "";
+						window.location.assign("pagina_JogoMemoria2.html");
+					}
+				} else {
+					function flip2Back(){
+					    // Flip the 2 tiles back over
+					    var tile_1 = document.getElementById(memory_tile_ids[0]);
+					    var tile_2 = document.getElementById(memory_tile_ids[1]);
+					    tile_1.style.background = "url('../images/jogo_memoria/default.jpg')";
+					    tile_2.style.background = "url('../images/jogo_memoria/default.jpg')";
+	            	    
+					    // Clear both arrays
+					    memory_values = [];
+	            	    memory_tile_ids = [];
+					}
+					setTimeout(flip2Back, 700);
+				}
+			}
+		}
+	}
+	</script>
+</head>
+<body>
+	<div id="memory_board"></div>
+	<script>newBoard();</script>
+	<div id="tempoJogo">
+		<h2>Tempo restante: <span id="contador"><script src="../js/contadorTempo.js"></script></span></h2>
+	</div>
+</body>
+</html>
