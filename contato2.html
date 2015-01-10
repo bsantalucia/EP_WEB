@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Cubos</title>
+		<meta charset="utf-8">
+		<link href="css/default.css" rel="stylesheet" type="text/css" media="screen" />
+		<link href="css/contato.css" rel="stylesheet" type="text/css" media="screen" />
+		<link href='http://fonts.googleapis.com/css?family=Play' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Carme' rel='stylesheet' type='text/css'>
+		<script src="http://maps.googleapis.com/maps/api/js"></script>
+	</head>
+	<body>
+		<div id="logo">
+			<img src="images/logo.png" alt="Logo" width="1024px" height="230px" >	
+		</div>
+		<div id="menu">
+			<ul>
+				<li><a href="php/index2.php">Home</a></li>
+				<li><a href="jogos/jogos2.html">Jogos</a></li>
+				<li><a href="sobre2.html">Sobre</a></li>
+				<li><a href="#">Contato</a></li>
+			</ul>
+		</div>
+		<div id="conteudo">
+			<div id="contato">
+				<h2>Entre em contato com a gente!</h2>
+				<p>
+					Além dos jogos gratuitos para web, também desenvolvemos jogos especialmente para empresas com o objetivo de treinar seus funcionários.
+					Também desenvolvemos jogos educativos para escolas e centros de língua. Venha nos conhecer!
+				</p>
+				<p>
+					Rua Pedro de Toledo, 80, São Paulo - SP - (próximo ao metrô Sta. Cruz)<br>
+					E-mail: <a href="mailto:youremailaddress">cubogames@gmail.com</a>
+				</p>
+				<div id="googleMap">
+					<script>
+						function initialize(){
+							var mapProp = {
+							center:new google.maps.LatLng(-23.598397, -46.637474),
+							zoom:17,
+							mapTypeId:google.maps.MapTypeId.ROADMAP
+						};
+
+						var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+					}
+					google.maps.event.addDomListener(window, 'load', initialize);
+					</script>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
