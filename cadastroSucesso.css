@@ -1,0 +1,82 @@
+
+
+h1{
+	font-family: 'Carme', sans-serif;
+	font-size: 60px;
+	color: #3b5998;
+	letter-spacing: -2px;
+}
+
+
+span{
+	font-family: 'Source Sans Pro', sans-serif;
+	letter-spacing: 1px;
+	font-size: 15px;
+}
+
+#imagemLogo{
+	padding-top: 26px;
+}
+
+#sucesso{
+	width: 1024px;
+	height: 750px;
+	background-color: #f7f7f7;
+	padding-top: 20px;
+	margin-top: 0px;
+}
+
+#sucesso h2{
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 25px;
+	color:  #3b5998;
+	letter-spacing: 1px;
+	text-align: center;
+}
+
+#sucesso h3{
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 20px;
+	color:  #008000;
+	letter-spacing: 1px;
+	text-align: center;
+}
+
+#sucesso p{
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 16px;
+	color:  #3b5998;
+	letter-spacing: 1px;
+	text-align: center;
+	padding-top: 20px;
+}
+
+#sucesso a{
+	/*text-decoration: none;*/
+	font-family: 'Play', sans-serif;
+	color: #3b5998;
+	letter-spacing: 1px;
+}
+
+#sucesso a:hover{
+	color: #8b9dc3;
+}
+
+#sucesso a:active{
+	color: #3b5998;
+}
+
+fieldset{
+	width: 480px;
+	height: 350px;
+	border: 2px solid #dfe3ee;
+	float: center;
+	margin-top: 15px;
+	margin-left: 225px;
+	padding-top: 30px;
+	padding-left: 35px;
+}
+
+
+
+
